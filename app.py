@@ -29,7 +29,7 @@ def get_info():
     }
 
     receiveIT = json.dumps(anointing, indent=2)
-    return Response(receiveIT, mimetype='application/json'), 200
+    return Response(receiveIT + "\n", mimetype='application/json'), 200
 
 
 if __name__ == "__main__":
