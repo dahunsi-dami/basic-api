@@ -1,15 +1,15 @@
 #!/bin/env/python3
-"""A public api to retrieve HNG 12 internship details."""
+"""A public API to tap my HNG 12 internship info."""
 
 from datetime import datetime
 from flask import Flask, Response
 from flask_cors import CORS
 import json
-import os
 
 app = Flask(__name__)
 
 CORS(app)
+
 
 @app.route('/api/info', methods=['GET'])
 def get_info():
@@ -17,6 +17,7 @@ def get_info():
     Defines logic to return current time with-
     -hardcoded email and github repo URL.
     """
+
     heeMail = "gbemigadare@gmail.com"
     geetLink = "https://github.com/dahunsi-dami/basic-api"
     timeNowNow = datetime.now().replace(microsecond=0).isoformat() + 'Z'
