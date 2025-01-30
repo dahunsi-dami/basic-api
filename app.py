@@ -2,8 +2,9 @@
 """A public api to retrieve HNG 12 internship details."""
 
 from datetime import datetime
-from flask import Flask, jsonify
+from flask import Flask, Response
 from flask_cors import CORS
+import json
 import os
 
 app = Flask(__name__)
@@ -20,13 +21,14 @@ def get_info():
     geetLink = "https://github.com/dahunsi-dami/basic-api"
     timeNowNow = datetime.now().replace(microsecond=0).isoformat() + 'Z'
 
-    receiveIT = {
+    anointing = {
         "email": heeMail,
         "current_datetime": timeNowNow,
         "github_url": geetLink
     }
 
-    return jsonify(receiveIT), 200
+    receiveIT = json.dumps(anointing, indent=2)
+    return Response(receiveIT, mimetype='application/json'), 200
 
 
 if __name__ == "__main__":
