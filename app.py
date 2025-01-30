@@ -1,5 +1,5 @@
 #!/bin/env/python3
-"""A public API to tap my HNG 12 internship info."""
+"""A public API to `tap` my HNG 12 internship info."""
 
 from datetime import datetime
 from flask import Flask, Response
