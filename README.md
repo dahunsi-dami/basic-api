@@ -39,7 +39,7 @@ Ensure you have:
 - Python 3 installed.
 - `pip` package manager.
 
-```
+```Bash
 # Clone the repository
 git clone https://github.com/dahunsi-dami/basic-api-py.git
 cd basic-api-py
@@ -59,7 +59,7 @@ curl -X GET http://127.0.0.1:5000/
 ```
 
 ## Deploying This API on Railway
-```
+```Bash
 # Push code to GitHub
 git add .
 git commit -m "Initial commit"
