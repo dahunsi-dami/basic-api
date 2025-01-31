@@ -11,6 +11,10 @@ app = Flask(__name__)
 CORS(app)
 
 
+@app.route('/')
+def home():
+    return "Welcome to my basic Flask API for the HNG-12 internship."
+
 @app.route('/api/info', methods=['GET'])
 def get_info():
     """
