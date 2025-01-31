@@ -10,17 +10,15 @@ import os
 
 app = Flask(__name__)
 
-# Enable CORS
 CORS(app)
 
-# Configure caching
 cache = Cache(app, config={
-    'CACHE_TYPE': 'simple',  # In-memory cache
-    'CACHE_DEFAULT_TIMEOUT': 3600  # Cache timeout in seconds
+    'CACHE_TYPE': 'simple',
+    'CACHE_DEFAULT_TIMEOUT': 3600
 })
 
 @app.route('/', methods=['GET'])
-@cache.cached(timeout=60)  # Cache this endpoint for 60 seconds
+@cache.cached(timeout=60)
 def get_info():
     """
     Defines logic to return current time with-
