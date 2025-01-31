@@ -24,7 +24,7 @@ def get_info():
         "github_url": "https://github.com/dahunsi-dami/basic-api-py"
     }
 
-    receiveIT = json.dumps(anointing, indent=2)
+    receiveIT = json.dumps(anointing)
     return Response(receiveIT, mimetype='application/json'), 200
 
 
