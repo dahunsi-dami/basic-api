@@ -5,6 +5,7 @@ from datetime import datetime
 from flask import Flask, Response
 from flask_cors import CORS
 import json
+import os
 
 app = Flask(__name__)
 
@@ -29,4 +30,5 @@ def get_info():
 
 
 if __name__ == "__main__":
+    os.environ['FLASK_ENV'] = 'production'
     app.run(host='0.0.0.0', port=5000)
