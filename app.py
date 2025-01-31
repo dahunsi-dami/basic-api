@@ -4,15 +4,23 @@
 from datetime import datetime
 from flask import Flask, Response
 from flask_cors import CORS
+from flask_caching import Cache
 import json
 import os
 
 app = Flask(__name__)
 
+# Enable CORS
 CORS(app)
 
+# Configure caching
+cache = Cache(app, config={
+    'CACHE_TYPE': 'simple',  # In-memory cache
+    'CACHE_DEFAULT_TIMEOUT': 3600  # Cache timeout in seconds
+})
 
 @app.route('/', methods=['GET'])
+@cache.cached(timeout=60)  # Cache this endpoint for 60 seconds
 def get_info():
     """
     Defines logic to return current time with-
