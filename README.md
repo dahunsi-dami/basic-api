@@ -1,7 +1,7 @@
 # Basic Public API
 
 ## Overview
-This simple public API returns my email, GitHub repo URL, and the time in which its GET request is sent in ISO 8601 format. It's an exercise from Stage 0 of the HNG Internship for back-end developers. You can [visit HNG to hire the best Python developers](https://hng.tech/hire/python-developers) in the world.
+This simple public API returns some basic information in JSON format (my email, GitHub repo URL, and the time in which its GET request is sent in ISO 8601 format). It's an exercise from Stage 0 of the HNG Internship for back-end developers. You can [visit HNG to hire the best Python developers](https://hng.tech/hire/python-developers) in the world.
 
 ## Technologies Used
 - Programming Language: Python
@@ -17,7 +17,7 @@ This simple public API returns my email, GitHub repo URL, and the time in which 
 `GET /`
 
 ### Response Format
-```
+```JSON
 {
   "email": "your-email@example.com",
   "current_datetime": "2025-01-30T09:30:00Z",
