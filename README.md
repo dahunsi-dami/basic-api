@@ -3,25 +3,43 @@
 ## Overview
 This simple public API returns some basic information in JSON format (my email, this GitHub repo URL, and the current time in ISO 8601 format). It's an exercise from Stage 0 of the HNG Internship for back-end developers. You can [visit HNG to hire the best Python developers](https://hng.tech/hire/python-developers) in the world.
 
+## Project Requirements
+- Programming Language/Framework: Use any of the following: See Sharp (C#), PHP, Python, Go, Java, JavaScript/TypeScript.
+- Deployment: The API must be deployed to a publicly accessible endpoint.
+- CORS Handling: Ensure the API handles Cross-Origin Resource Sharing (CORS) appropriately.
+- Response Format: All responses must be in JSON format.
+- Endpoint `GET <your-url>`.
+- The required JSON Response Format (200 OK).
+- The API must accept GET requests and return the required JSON response.
+- The `current_datetime` field must be dynamically generated in ISO 8601 format (UTC).
+- It provides appropriate HTTP status code
+
 ## Technologies Used
 - Programming Language: Python
 - Framework: Flask
 - Deployment: Railway
 - CORS Handling: using Flask-CORS
-- Caching: using Flask Caching
+- Caching: using Flask Caching for improved performance
 - Deployment: Railway
 
 ## API Documentation
 
-### Endpoint
+### API Endpoint
 `GET /`
+
+### Public API Endpoint
+`https://basic-api-py.up.railway.app/`
+
+### Sample Usage
+Here's the request format:
+`curl -X GET https://basic-api-py.up.railway.app/`
 
 ### Response Format
 ```JSON
 {
   "email": "your-email@example.com",
   "current_datetime": "2025-01-30T09:30:00Z",
-  "github_url": "https://github.com/yourusername/your-repo"
+  "github_url": "https://github.com/dahunsi-dami/basic-api-py"
 }
 ```
 
@@ -31,10 +49,10 @@ This simple public API returns some basic information in JSON format (my email, 
 - `github_url`: My GitHub repository URL for this project.
 
 ## Deployment
-This API is publicly accessible at:
+Again, this API is publicly accessible at:
 `https://basic-api-py.up.railway.app/`
 
-## Running this API Locally
+## How To Run this API Locally
 Ensure you have:
 - Python 3 installed.
 - `pip` package manager.
@@ -72,4 +90,5 @@ git push origin main
 # 4. Set the start command:
 gunicorn -w 4 -b 0.0.0.0:5000 app:app
 # 5. Deploy 🚀
+# 6. Go to Settings and Generate Domain under Network to get your publicly accessible API URL.
 ```
