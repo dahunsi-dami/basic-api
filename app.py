@@ -18,18 +18,14 @@ def get_info():
     -hardcoded email and github repo URL.
     """
 
-    heeMail = "gbemigadare@gmail.com"
-    geetLink = "https://github.com/dahunsi-dami/basic-api-py"
-    timeNowNow = datetime.now().replace(microsecond=0).isoformat() + 'Z'
-
     anointing = {
-        "email": heeMail,
-        "current_datetime": timeNowNow,
-        "github_url": geetLink
+        "email": "gbemigadare@gmail.com",
+        "current_datetime": datetime.now().replace(microsecond=0).isoformat() + 'Z',
+        "github_url": "https://github.com/dahunsi-dami/basic-api-py"
     }
 
     receiveIT = json.dumps(anointing, indent=2)
-    return Response(receiveIT + "\n", mimetype='application/json'), 200
+    return Response(receiveIT, mimetype='application/json'), 200
 
 
 if __name__ == "__main__":
