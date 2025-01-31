@@ -18,7 +18,7 @@ cache = Cache(app, config={
 })
 
 @app.route('/', methods=['GET'])
-@cache.cached(timeout=60)
+@cache.cached(timeout=3600)
 def get_info():
     """
     Defines logic to return current time with-
