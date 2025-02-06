@@ -12,12 +12,11 @@ This simple public API returns some basic information in JSON format (my email, 
 - The required JSON Response Format (200 OK).
 - The API must accept GET requests and return the required JSON response.
 - The `current_datetime` field must be dynamically generated in ISO 8601 format (UTC).
-- It provides appropriate HTTP status code
+- It provides appropriate HTTP status code.
 
 ## Technologies Used
 - Programming Language: Python
 - Framework: Flask
-- Deployment: Railway
 - CORS Handling: using Flask-CORS
 - Caching: using Flask Caching for improved performance
 - Deployment: Railway
